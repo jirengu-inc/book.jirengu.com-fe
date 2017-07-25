@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+  <div class="query-area">
+    <button>查询</button>   
+  </div>
+
+
+  <script>
+    var btn = document.querySelector('.query-area button')
+
+
+    btn.addEventListener('click', function(){
+       var xhr = new XMLHttpRequest()
+       xhr.onload = function(){
+        console.log(xhr.responseText)
+       }
+
+      xhr.open('get', 'hello', true)
+      xhr.send()
+    })
+
+
+
+  </script>
+  
+</body>
+</html>
